@@ -97,10 +97,3 @@ Contributions are welcome! Please fork the repository and submit a pull request 
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-
-
-# Author(s)
-Mohamed Abdelhamid
-My teammates from college
-
-
