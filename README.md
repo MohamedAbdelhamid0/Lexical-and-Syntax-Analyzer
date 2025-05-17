@@ -15,7 +15,7 @@ This project is a Python source code analyzer written in C++ with a graphical us
 - **Modular Structure**: Code is organized into separate components for maintainability.
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
-## Project Structure (in case you need ot understand the files)
+## Project Structure (in case you need to understand the files)
 
 | File/Folder            | Description                                                   
 |------------------------|---------------------------------------------------------------|                   
