@@ -1,6 +1,6 @@
 # Lexical-and-Syntax-Analyzer
 
-# Python Syntax Analyzer (C++/Qt Project)
+# Python Lexical and Syntax Analyzer (Using C++/Qt Project)
 
 This project is a Python source code analyzer written in C++ with a graphical user interface (GUI) built using Qt. It provides tools for lexical analysis (tokenizing), syntax analysis (parsing), and parse tree visualization of Python code. The project is structured for cross-platform development using CMake.This project was a group project in college
 
