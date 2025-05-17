@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1200</width>
+    <height>800</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Python Lexer GUI</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">/* General window styling */
+QMainWindow {
+    background-color: #2E2E2E;
+}
+
+/* Style for labels */
+QLabel {
+    font: bold 14px &quot;Arial&quot;;
+    color: #E0E0E0;
+    padding: 5px;
+}
+
+/* Style for text areas */
+QPlainTextEdit {
+    background-color: #1E1E1E;
+    color: #FFFFFF;
+    border: 1px solid #555555;
+    border-radius: 5px;
+    padding: 5px;
+    font: 12px &quot;Courier New&quot;;
+}
+
+/* Style for table */
+QTableWidget {
+    background-color: #1E1E1E;
+    color: #FFFFFF;
+    border: 1px solid #555555;
+    border-radius: 5px;
+    font: 12px &quot;Courier New&quot;;
+}
+
+QTableWidget::item {
+    padding: 5px;
+}
+
+QHeaderView::section {
+    background-color: #3E3E3E;
+    color: #E0E0E0;
+    padding: 5px;
+    border: 1px solid #555555;
+}
+
+/* Style for splitter */
+QSplitter::handle {
+    background-color: #555555;
+}
+
+QSplitter::handle:hover {
+    background-color: #666666;
+}
+
+/* Style for buttons */
+QPushButton {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px;
+    font: bold 12px &quot;Arial&quot;;
+}
+
+QPushButton:hover {
+    background-color: #45A049;
+}
+
+QPushButton:pressed {
+    background-color: #3D8B40;
+}
+
+QPushButton#clearButton {
+    background-color: #F44336;
+}
+
+QPushButton#clearButton:hover {
+    background-color: #D32F2F;
+}
+
+QPushButton#clearButton:pressed {
+    background-color: #B71C1C;
+}
+
+QPushButton#openFileButton {
+    background-color: #2196F3;
+}
+
+QPushButton#openFileButton:hover {
+    background-color: #1E88E5;
+}
+
+QPushButton#openFileButton:pressed {
+    background-color: #1976D2;
+}
+   </string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="mainLayout">
+    <property name="spacing">
+     <number>10</number>
+    </property>
+    <property name="leftMargin">
+     <number>10</number>
+    </property>
+    <property name="topMargin">
+     <number>10</number>
+    </property>
+    <property name="rightMargin">
+     <number>10</number>
+    </property>
+    <property name="bottomMargin">
+     <number>10</number>
+    </property>
+    <item>
+     <widget class="QSplitter" name="mainSplitter">
+      <property name="orientation">
+       <enum>Qt::Orientation::Horizontal</enum>
+      </property>
+      <widget class="QWidget" name="inputWidget">
+       <layout class="QVBoxLayout" name="inputLayout">
+        <item>
+         <widget class="QLabel" name="labelInput">
+          <property name="text">
+           <string>Enter Python Code:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPlainTextEdit" name="codeInput">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>200</height>
+           </size>
+          </property>
+          <property name="placeholderText">
+           <string>Enter Python code here...</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="buttonLayout">
+          <item>
+           <widget class="QPushButton" name="analyzeButton">
+            <property name="text">
+             <string>Analyze</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="clearButton">
+            <property name="text">
+             <string>Clear</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="openFileButton">
+            <property name="text">
+             <string>Open File</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="buttonSpacer">
+            <property name="orientation">
+             <enum>Qt::Orientation::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="outputWidget">
+       <layout class="QVBoxLayout" name="outputLayout">
+        <item>
+         <widget class="QTabWidget" name="analysisTabWidget">
+          <property name="currentIndex">
+           <number>0</number>
+          </property>
+          <widget class="QWidget" name="lexicalTab">
+           <attribute name="title">
+            <string>Lexical Analysis</string>
+           </attribute>
+           <layout class="QVBoxLayout" name="lexicalLayout">
+            <item>
+             <widget class="QSplitter" name="lexicalSplitter">
+              <property name="orientation">
+               <enum>Qt::Orientation::Vertical</enum>
+              </property>
+              <widget class="QWidget" name="tokenWidget">
+               <layout class="QVBoxLayout" name="tokenLayout">
+                <item>
+                 <widget class="QLabel" name="labelTokens">
+                  <property name="text">
+                   <string>Tokens:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPlainTextEdit" name="tokenOutput">
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>150</height>
+                   </size>
+                  </property>
+                  <property name="readOnly">
+                   <bool>true</bool>
+                  </property>
+                  <property name="placeholderText">
+                   <string>Token output will appear here...</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+              <widget class="QWidget" name="lexicalErrorWidget">
+               <layout class="QVBoxLayout" name="lexicalErrorLayout">
+                <item>
+                 <widget class="QLabel" name="labelLexicalErrors">
+                  <property name="text">
+                   <string>Lexical Errors:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPlainTextEdit" name="lexicalErrorOutput">
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>150</height>
+                   </size>
+                  </property>
+                  <property name="readOnly">
+                   <bool>true</bool>
+                  </property>
+                  <property name="placeholderText">
+                   <string>Lexical errors (if any) will appear here...</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+              <widget class="QWidget" name="symbolTableWidget">
+               <layout class="QVBoxLayout" name="symbolTableLayout">
+                <item>
+                 <widget class="QLabel" name="labelSymbolTable">
+                  <property name="text">
+                   <string>Symbol Table:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QTableWidget" name="symbolTable">
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>150</height>
+                   </size>
+                  </property>
+                  <column>
+                   <property name="text">
+                    <string>ID</string>
+                   </property>
+                  </column>
+                  <column>
+                   <property name="text">
+                    <string>Identifier</string>
+                   </property>
+                  </column>
+                  <column>
+                   <property name="text">
+                    <string>Data Type</string>
+                   </property>
+                  </column>
+                  <column>
+                   <property name="text">
+                    <string>Value</string>
+                   </property>
+                  </column>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="syntaxTab">
+           <attribute name="title">
+            <string>Syntax Analysis</string>
+           </attribute>
+           <layout class="QVBoxLayout" name="syntaxLayout">
+            <item>
+             <widget class="QSplitter" name="syntaxSplitter">
+              <property name="orientation">
+               <enum>Qt::Orientation::Vertical</enum>
+              </property>
+              <widget class="QWidget" name="syntaxErrorWidget">
+               <layout class="QVBoxLayout" name="syntaxErrorLayout">
+                <item>
+                 <widget class="QLabel" name="labelSyntaxErrors">
+                  <property name="text">
+                   <string>Syntax Errors:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPlainTextEdit" name="syntaxErrorOutput">
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>150</height>
+                   </size>
+                  </property>
+                  <property name="readOnly">
+                   <bool>true</bool>
+                  </property>
+                  <property name="placeholderText">
+                   <string>Syntax errors (if any) will appear here...</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+              <widget class="QWidget" name="parseTreeWidget">
+               <layout class="QVBoxLayout" name="parseTreeLayout">
+                <item>
+                 <widget class="QLabel" name="labelParseTree">
+                  <property name="text">
+                   <string>Parse Tree:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QTreeWidget" name="parseTree">
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>300</height>
+                   </size>
+                  </property>
+                  <column>
+                   <property name="text">
+                    <string>Node</string>
+                   </property>
+                  </column>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1200</width>
+     <height>25</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
