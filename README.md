@@ -36,13 +36,13 @@ This project is a Python source code analyzer written in C++ with a graphical us
 - **C++ Compiler** (e.g., GCC, Clang, MSVC)
 - **CMake** (version 3.10 or newer)
 - **Qt** (version 5 or 6, for GUI components)
-
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## Build Instructions
 
 1. **Clone the repository**
    ```bash
-   git clone <your-repository-url>
-   cd <your-repository-name>
+   git clone https://github.com/MohamedAbdelhamid0/Lexical-and-Syntax-Analyzer.git
+   cd Lexical-and-Syntax-Analyzer
    ```
 
 2. **Create and enter the build directory**
@@ -51,7 +51,7 @@ This project is a Python source code analyzer written in C++ with a graphical us
    cd build
    ```
 
-3. **Configure with CMake**
+3. **Configure the project with CMake**
    ```bash
    cmake ..
    ```
@@ -62,10 +62,9 @@ This project is a Python source code analyzer written in C++ with a graphical us
    ```
 
 5. **Run the application**
-   - The executable will be available in the `build` directory.
-   - You can launch it from your terminal or by double-clicking the executable.
-
-
+   - The executable will appear in the `build` directory.
+   - Launch it from your terminal or by double-clicking in your file explorer.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## Usage
 
@@ -77,19 +76,31 @@ This project is a Python source code analyzer written in C++ with a graphical us
     - Visualize the parse tree.
 4. Review outputs in the GUI.
 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-
-## Contributing
+# Contributing
 
 Contributions are welcome! Please fork the repository and submit a pull request with your changes. For suggestions or bug reports, please open an issue.
 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+# Screenshots
+![WhatsApp Image 2025-05-17 at 00 22 49_53af227d](https://github.com/user-attachments/assets/566ba965-396b-4325-85f1-516702ebaf87)
+![WhatsApp Image 2025-05-17 at 00 24 03_a2395918](https://github.com/user-attachments/assets/a3e17141-75b4-4083-97d6-fa4d079ddae3)
+![WhatsApp Image 2025-05-17 at 00 24 04_b34ba47c](https://github.com/user-attachments/assets/9cd13ded-44f3-4d91-90b6-b28bdcae4944)
+![WhatsApp Image 2025-05-17 at 00 22 49_2eb3e7b4](https://github.com/user-attachments/assets/a82ed074-41f2-45bf-9965-57f72deb2a3e)
+![WhatsApp Image 2025-05-17 at 00 22 50_c9c959e9](https://github.com/user-attachments/assets/70503d46-ccfa-4b68-bfb2-dfc2ec0453dc)
+![WhatsApp Image 2025-05-17 at 00 26 41_41aed4bf](https://github.com/user-attachments/assets/5446b664-65d9-4c00-aa5d-dd0d42e78241)
+![WhatsApp Image 2025-05-17 at 00 26 41_03cf6af9](https://github.com/user-attachments/assets/1881ea0c-d63f-49b7-ae11-eb4299b24a0c)
 
-## Author(s)
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+# Author(s)
 Mohamed Abdelhamid
 My teammates from college
 
 
-
-
-
-------------------------------------------------------------------------------------------------------------------------------------------------------------------
